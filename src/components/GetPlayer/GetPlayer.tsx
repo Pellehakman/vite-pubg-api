@@ -10,8 +10,8 @@ const GetPlayer = ({setPlayerID}: Props) => {
     const [inputPlayer, setInputPlayer] = useState<string>("")
     const [ifError, setIfError] = useState<string>("")
     const [playerMATCHES, setPlayerMATCHES] = useState<any>([])
+    console.log(playerMATCHES)
 
-    
     // const [playerID, setPlayerID] = useState<string>("")
     // console.log(playerID)
     
@@ -19,7 +19,7 @@ const GetPlayer = ({setPlayerID}: Props) => {
     const player_url = `${player}`
     const URL = `https://api.pubg.com/shards/steam/`;
 
-const match = playerMATCHES.map({})
+
     const getPlayer = async () => {
       
         if (inputPlayer.length === 0) {
@@ -35,7 +35,7 @@ const match = playerMATCHES.map({})
                 console.log(...response.data.data)
                 setPlayerID(response.data.data[0].id)
                 // setPlayerNAME(response.data.data[0].attributes.name)
-                setPlayerMATCHES([...response.data.data[0].relationships.matches.data])
+                setPlayerMATCHES(response.data.data[0].relationships.matches.data)
             })
         .catch(function (error) {
             if (error.response) {
@@ -55,14 +55,11 @@ const match = playerMATCHES.map({})
 
 <br></br>
             {ifError}
-
             <section className="cards-container">
-            {playerMATCHES.map((menuItem: MenuItem, i: number) => {
-              return <MenuCard menuItem={menuItem} key={i} />;
+            {playerMATCHES.map((f:any) => {
+              return <div key={f.id}>{f.id}</div>;
             })}
           </section>
-
-            
         </div>
     );
 };

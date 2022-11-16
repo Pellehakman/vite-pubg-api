@@ -5,9 +5,9 @@ import './Nav.scss'
 const Nav = () => {
     return (
         <div className='nav-container'>
-            <header>THIS IS NAV</header>
-            <Link to="/">HOME</Link><br></br>
-            <Link to="/Statistics">Statistics</Link>
+            
+            <Link className='nav-item' to="/">Home</Link><br></br>
+            <Link className='nav-item' to="/Statistics">Statistics</Link>
         </div>
     );
 };

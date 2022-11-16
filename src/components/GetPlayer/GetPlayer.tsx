@@ -55,11 +55,15 @@ const GetPlayer = ({setPlayerID}: Props) => {
 
 <br></br>
             {ifError}
-            <section className="cards-container">
-            {playerMATCHES.map((f:any) => {
-              return <div key={f.id}>{f.id}</div>;
-            })}
-          </section>
+            
+
+<select>
+    {playerMATCHES.map((f:any) => {
+        return (<option>{f.id}</option>)
+    })}
+</select>
+
+
         </div>
     );
 };

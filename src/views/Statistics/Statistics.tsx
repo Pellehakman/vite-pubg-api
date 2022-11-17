@@ -9,10 +9,10 @@ import { firebaseConfig } from '../../firebase/config';
 
 
 const Statistics =  () => {
+
     initializeApp(firebaseConfig);
       const db = getFirestore()   
-      const colRef = collection(db, 'players')
-      
+      const colRef = collection(db, 'players')   
       getDocs(colRef)
       .then((snapshot) => {
           let players:any = []

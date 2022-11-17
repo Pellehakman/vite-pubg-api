@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import HomePage from './views/HomePage/HomePage'
 import Nav from './components/Nav/Nav'
 import Statistics from './views/Statistics/Statistics'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/Statistics" element={<Statistics />} />
       </Routes>
+      <Footer />
     </div>
   )
 }

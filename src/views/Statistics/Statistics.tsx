@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import GetPlayer from '../../components/GetPlayer/GetPlayer';
+import './Statistics.scss'
 
 
 import {collection, getDoc, getDocs, getFirestore} from 'firebase/firestore'
@@ -29,7 +30,7 @@ const Statistics =  () => {
 
 
     return (
-        <div>
+        <div className='statistics-container'>
             <header>This is Statistics</header>
             <GetPlayer setPlayerID={setPlayerID}/>
             

@@ -29,3 +29,16 @@ $menu-item: "Bebas Neue";
 $logo-font: "Dorsa";
 $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.212);
 
+@mixin nav-item-design() {
+    font-family: $menu-item;
+        font-size: $nav-item-fs;
+        color: $white-bg;
+        line-height: normal;
+        display: flex;
+        width: 15rem;
+        height: 4rem;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(8, 8, 8);
+        border-left: 1px solid grey;
+}

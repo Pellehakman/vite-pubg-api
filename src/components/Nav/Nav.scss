@@ -7,8 +7,8 @@
     
     
 .nav-popup{
-    height: 3rem;
-    background-color: black;
+    height: 2rem;
+    background-color: rgb(20, 11, 36);
     
 }
 .nav-links{
@@ -18,23 +18,14 @@
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
     
-    .nav-item{
-        font-family: $menu-item;
-        font-size: $nav-item-fs;
-        color: $white-bg;
-        line-height: normal;
-        display: flex;
-        width: 15rem;
-        height: 4rem;
-        align-items: center;
-        justify-content: center;
-        
-        background-color: rgb(8, 8, 8);
-        border-left: 1px solid grey;
-        
-        
+    .ina-nav-item{
+        @include nav-item-design;   
     }:nth-child(4){
         border-right: 1px solid grey;
+    }
+    .nav-item{
+        @include nav-item-design;
+        background-color: rgb(18, 18, 18);
     }
 }
 

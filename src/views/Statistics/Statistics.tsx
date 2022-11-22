@@ -74,7 +74,7 @@ function Statistics(){
         <div className='statistics-container'>
             <header>This is Statistics</header>
             
-            <GetPlayer setPlayerID={setPlayerID} setPlayerNAME={setPlayerNAME} createData={createData} />
+            <GetPlayer  />
             <button onClick={createData}>SAVE</button>
             {/* <button onClick={fetchData}>Load</button> */}
             

@@ -12,6 +12,7 @@ const Nav = () => {
             <NavLink className={({isActive}) => (isActive ? 'nav-item' : 'ina-nav-item')} to="/statistics">STATISTICS</NavLink>
             <NavLink className={({isActive}) => (isActive ? 'nav-item' : 'ina-nav-item')} to="/leaderboard">LEADERBOARD</NavLink>
             <NavLink className={({isActive}) => (isActive ? 'nav-item' : 'ina-nav-item')} to="/epscore">EPSCORE</NavLink>
+            <NavLink className={({isActive}) => (isActive ? 'nav-item' : 'ina-nav-item')} to="/account">ACCOUNT</NavLink>
 
             </div>
             

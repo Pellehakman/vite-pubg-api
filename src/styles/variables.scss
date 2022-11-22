@@ -16,8 +16,11 @@ $footer-bg: #03292c;
 $price-bg: #ff0000;
 $light-grey: #E9E9E9;
 $medium-grey: #F6F6F6;
-$dark-grey: #B5B5B5;
 
+
+$border-grey: #2c2b2b;
+$navActive-item-bg: #1b1b1b;
+$navInactive-item-bg: #0e0e0e;
 
 
 $logo-fs: 3.5rem;
@@ -35,10 +38,12 @@ $box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.212);
         color: $white-bg;
         line-height: normal;
         display: flex;
-        width: 15rem;
-        height: 4rem;
+        width: 13rem;
+        height: 3.5rem;
         align-items: center;
         justify-content: center;
-        background-color: rgb(8, 8, 8);
-        border-left: 1px solid grey;
+        background-color: $navInactive-item-bg;
+        border-left: 1px solid $border-grey;
+
+        transition: .1s all;
 }

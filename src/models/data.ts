@@ -4,3 +4,10 @@ export type Player = {
 	accountID: string;
 };
 
+
+
+export type DocumentData = {
+	playerName: string;
+    id: string;
+	accountID: string;
+};

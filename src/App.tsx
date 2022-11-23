@@ -7,8 +7,11 @@ import Nav from './components/Nav/Nav'
 import Statistics from './views/Statistics/Statistics'
 import Footer from './components/Footer/Footer'
 import Ad from './views/Ad/Ad'
+import { firebaseConfig } from './firebase/config'
+import { initializeApp } from 'firebase/app'
 
 function App() {
+  initializeApp(firebaseConfig);
   const [count, setCount] = useState(0)
 
   return (

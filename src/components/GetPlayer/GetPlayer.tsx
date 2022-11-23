@@ -1,9 +1,10 @@
 import axios from 'axios';
-import { doc, getFirestore, setDoc } from 'firebase/firestore';
+import { doc, getFirestore, setDoc, deleteDoc } from 'firebase/firestore';
 import { nanoid } from 'nanoid';
 import React, { useEffect, useState } from 'react';
 const TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMGUwMGM2MC01ODUzLTAxM2EtY2FjYi0zNWM2YWU1NzY4MmIiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjQyMjY2NTM5LCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InNxdGF0In0.cSGggAHy9gLhqW2Z5AZdUTreFQZfLxFZKa7-UK1iFxU';
 type Props = {
+    
 
  
 }
@@ -35,12 +36,16 @@ const GetPlayer = ({}: Props) => {
             }
         }).then(
                 (response:any) => {
+                    
+                    
                 setDoc(doc(db, "players", nanoid()), {
 
                     playerName: (response.data.data[0].attributes.name),
                     accountID: (response.data.data[0].id)
 
                   })
+                  
+                
 
                 }).catch(function (error) { if (error.response) 
                 

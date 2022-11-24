@@ -10,7 +10,7 @@ const HomePage = () => {
             
             <header>This is Home Page</header>
             <div className='homePage-player'>
-                <GetPlayer setPlayerID={undefined} />
+                <GetPlayer />
 
             </div>
             

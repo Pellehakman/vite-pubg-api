@@ -15,8 +15,7 @@ const GetPlayer = ({}: Props) => {
     const [inputPlayer, setInputPlayer] = useState<string>("")
     const [ifError, setIfError] = useState<string>("")
     const [playerMATCHES, setPlayerMATCHES] = useState<any>([])
-    const [playerID, setPlayerID] = useState<string>("")
-    const [playerNAME, setPlayerNAME] = useState<string>("")
+    
     
     
     let player = `players?filter[playerNames]=${inputPlayer}`;
@@ -36,32 +35,19 @@ const GetPlayer = ({}: Props) => {
             }
         }).then(
                 (response:any) => {
-                    
-                    
                 setDoc(doc(db, "players", nanoid()), {
 
                     playerName: (response.data.data[0].attributes.name),
-                    accountID: (response.data.data[0].id)
+                    accountID: (response.data.data[0].id),
+                    date: Date.now()
 
                   })
-                  
-                
-
                 }).catch(function (error) { if (error.response) 
-                
                     {setIfError(error.response.data.errors[0].detail)}
                 })
-    }
-        
-        
-    }
-    // const createData = async  () => {
-    //     await setDoc(doc(db, "players", nanoid()), {
-    //        playerName: playerNAME,
-    //        accountID: playerID
-    //      }
-    //      )}
-       
+            }
+        }
+
 
 
     return (
@@ -76,11 +62,7 @@ const GetPlayer = ({}: Props) => {
             {ifError}
             
 
-<select>
-    {playerMATCHES.map((f:any) => {
-        return (<option>{f.id}</option>)
-    })}
-</select>
+
 
 
         </div>

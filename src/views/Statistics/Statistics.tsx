@@ -19,6 +19,7 @@ function Statistics({}: Props){
   const [obj, setObj] = useState<Player[]>([])
 
 
+
       useEffect(() => {
         ;(async () => {
           const colRef = collection(db, 'players')
@@ -44,7 +45,11 @@ function Statistics({}: Props){
            <div>
             <h2> Search Results </h2>
             {obj.map((f) => <div key={f.id}>{f.playerName}</div>)}
-           
+            {/* <select>
+             {obj.map((f:any) => {
+             return (<option>{f.id}</option>)
+            })}
+            </select> */}
            </div>
         </div>
     );

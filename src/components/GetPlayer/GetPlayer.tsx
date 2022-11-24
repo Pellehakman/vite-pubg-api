@@ -35,7 +35,7 @@ const GetPlayer = ({}: Props) => {
             }
         }).then(
                 (response:any) => {
-                setDoc(doc(db, "players", nanoid()), {
+                setDoc(doc(db, "players", "playerOne"), {
 
                     playerName: (response.data.data[0].attributes.name),
                     accountID: (response.data.data[0].id),
